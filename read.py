@@ -15,11 +15,6 @@ imgGray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 cv.imshow('Bright Image to Gray Level Image',imgGray)
 cv.waitKey(0); 
 
-
-#hist=cv.calcHist([imgGray],[0],None,[256],[0,256])
-#plt.plot(hist)
-#plt.show()
-
 #Show the histogram of the image
 hist,bins = np.histogram(imgGray.flatten(),256,[0,256]) 
 plt.hist(img.flatten(),256,[0,256], color = 'r')
